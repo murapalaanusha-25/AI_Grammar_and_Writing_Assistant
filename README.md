@@ -1,6 +1,6 @@
 # WriteAI — AI Grammar & Writing Assistant
 
-A full-stack AI writing assistant built with React + Supabase Auth + Claude API.
+A full-stack AI writing assistant built with React + Supabase Auth + API
 
 ## Features
 - Grammar & Spelling correction
