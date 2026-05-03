@@ -36,14 +36,17 @@ export function AuthProvider({ children }) {
     return () => subscription.unsubscribe();
   }, []);
 
-  const signUp = async (email, password, fullName) => {
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: { data: { full_name: fullName } }
-    });
-    return { data, error };
-  };
+ const signUp = async (email, password, fullName) => {
+  const { data, error } = await supabase.auth.signUp({
+    email,
+    password,
+    options: {
+      data: { full_name: fullName },
+      emailRedirectTo: "https://aigrammarassistant-rtt7mmagh-murapalaanusha-25s-projects.vercel.app"
+    }
+  });
+  return { data, error };
+};
 
   const signIn = async (email, password) => {
     const { data, error } = await supabase.auth.signInWithPassword({ email, password });
